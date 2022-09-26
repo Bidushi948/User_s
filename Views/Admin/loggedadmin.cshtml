@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "loggedadmin";
+    Layout = "~/Views/_aLayout.cshtml";
+}
+
+<link href="~/css/popuo-box.css" rel=" stylesheet"/>
+<link href="~/css/admin-logg-style.css" rel="stylesheet" />
+<div class="main">
+		<h1>Welcome Admin</h1>
+			<div class="w3l_main_grids">
+				<div class="agile-w3ls">
+						<div class="agile-nav">
+							<nav>
+								<ul>
+									<li><a @Html.ActionLink("Add User","Add_user","Auserview", null, new { @class = "" })</a></li>
+									<li><a  @Html.ActionLink("View User","Userview","Auserview", null, new { @class = "Auserview" })</a></li>
+									<li><a class="popup-with-zoom-anim" href="#"> Work </a></li>
+									<li><a class="popup-with-zoom-anim" href="#">Time Sheet</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+			</div>
+</div>

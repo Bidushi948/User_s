@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title="Adminlogin";
+    Layout = "~/Views/_aLayout.cshtml";
+}
+<link href="~/css/admin-font-awesome.css" rel="stylesheet" />
+<link href="~/css/admin-style.css" rel="stylesheet" />
+<div class="login-form">
+	<div class="top-login">
+		<span>
+			<img src="~/images/group.png" />
+		</span>
+	</div>
+	<h1>Admin Login</h1>
+	<div class="login-top">
+    <form action="Verify" method="post">
+			<div class="login-ic">
+				<i></i>
+				<input type="text" name="name" value="name" placeholder="Enter User Name" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}"/>
+			<div class="clear"> </div>
+			</div>
+			<div class="login-ic">
+				<i class="icon"></i>
+				<input type="password" name="password" placeholder="Enter Password" required="" id="myInput" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
+				<div class="clear"> </div>
+				<div class="agile_label"style="text-aline:center">
+					<label>Show Password</label>
+					<input id="check3" name="check3" type="checkbox" value="show password" onclick="myFunction()">
+				<div class="clear"> </div>
+				</div>	
+			</div>
+			<!-- script for show password -->
+			<script>
+				function myFunction() {
+					var x = document.getElementById("myInput");
+					if (x.type === "password") {
+						x.type = "text";
+					} else {
+						x.type = "password";
+					}
+				}
+			</script>
+			<!-- //end script -->
+			<div class="log-bwn">
+				<input type="submit" value="LOGIN">
+			</div>
+				
+		</form>
+		</div>
+</div>

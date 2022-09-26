@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Userview";
+    Layout = "~/Views/_aLayout.cshtml";
+    string[] TableHeaders = new string[]{"User ID","User Name","User Address","User Phone no."};
+}
+<div class="table">
+    <table class="table table-bordered table-hover" id="userdetails">
+        <thead>
+            <tr>
+                @{
+                    foreach (var i in TableHeaders)
+                    {
+                                    <th>
+                                    @i
+                                    </th>
+                    }
+                }
+            </tr>
+        </thead>
+        <tbody>
+            
+        @{
+            if(Model!=null)
+            {
+                foreach(var p in Model)
+                {
+                    <tr>
+                      <td >@p.u_id</td>
+                      <td>@p.username</td>
+                       <td>@p.useraddress</td>
+                       <td>@p.userphoneno</td>
+                       <td><a href="#">Edit</a></td>
+                       <td><a href="#">Delete</a></td>
+                    </tr>     
+                }
+            }
+        }
+        </tbody>
+    </table>
+</div>
